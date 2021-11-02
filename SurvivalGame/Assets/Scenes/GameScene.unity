@@ -2503,6 +2503,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2518,6 +2519,19 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9beab16d6ea9054dabe2d74af95fafc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 1296966042}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -2545,7 +2559,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2569,7 +2583,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 1, y: -1.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2619,6 +2633,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1296966042 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6729147843546870736, guid: c08651e14086c2741bce78f192762115, type: 3}
+  m_PrefabInstance: {fileID: 6729147844476298280}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1296966048
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296966042}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 59eb0272d7a4fdf4fa8c3f7c83bccebd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &6729147844476298280
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2648,15 +2686,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6729147843546870737, guid: c08651e14086c2741bce78f192762115, type: 3}
       propertyPath: m_GravityScale
-      value: 1
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6729147843546870737, guid: c08651e14086c2741bce78f192762115, type: 3}
       propertyPath: m_CollisionDetection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6729147843546870738, guid: c08651e14086c2741bce78f192762115, type: 3}
+      propertyPath: m_Size.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729147843546870738, guid: c08651e14086c2741bce78f192762115, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729147843546870738, guid: c08651e14086c2741bce78f192762115, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.125
+      objectReference: {fileID: 0}
     - target: {fileID: 6729147843546870739, guid: c08651e14086c2741bce78f192762115, type: 3}
       propertyPath: JumpForce
-      value: 6
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6729147843546870739, guid: c08651e14086c2741bce78f192762115, type: 3}
       propertyPath: movementSpeed
