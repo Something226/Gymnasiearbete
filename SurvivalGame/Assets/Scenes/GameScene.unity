@@ -2547,7 +2547,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &541316205
 GameObject:
@@ -2591,7 +2591,7 @@ Transform:
   m_Children:
   - {fileID: 314834642}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1265431262
 GameObject:
@@ -2657,7 +2657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1580720654}
-  runSpeed: 750
+  runSpeed: 500
 --- !u!61 &1580720652
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2667,7 +2667,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1580720650}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 11a6ecb96359598458ccd034a23f3a02, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2718,8 +2718,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_JumpForce: 400
-  m_CrouchSpeed: 0.067
-  m_MovementSmoothing: 0.05
+  m_CrouchSpeed: 0.061
+  m_MovementSmoothing: 0.1
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
