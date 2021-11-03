@@ -1,29 +1,28 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
 
-    public float movementSpeed = 1;
-    public float JumpForce = 1;
+    public CharacterController2D controller;
 
-    private Rigidbody2D _rigidBody;
+    public float runSpeed = 10f;
 
-    private void Start()
-    {
-        _rigidBody = GetComponent<Rigidbody2D>();
-    }
+    float horizontalMove = 0f;
 
     // Update is called once per frame
     private void Update()
     {
 
-        var movement = Input.GetAxis("Horizontal");
-        transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * movementSpeed;
+        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-        if (Input.GetButtonDown("Jump") && Mathf.Abs(_rigidBody.velocity.y) < 0.001f)
-        {
-            _rigidBody.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
-        }
+    }
+
+    void FixedUpdate()
+    {
+
+        controller.Move(horizontalMove * Time.fixedDeltaTime, false, false);
 
     }
 }
