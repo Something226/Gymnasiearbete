@@ -12,8 +12,14 @@ public class Inventory
 
         itemList = new List<Item>();
 
-        Debug.Log("Inventory");
+        AddItem(new Item { itemType = Item.ItemType.Weapon, amount = 1 });
+        Debug.Log(itemList.Count);
 
+    }
+
+    public void AddItem(Item item)
+    {
+        itemList.Add(item);
     }
 
 }
