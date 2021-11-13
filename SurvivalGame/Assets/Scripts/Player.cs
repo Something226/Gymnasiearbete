@@ -9,11 +9,14 @@ public class Player : MonoBehaviour
 
     private int hp;
 
+    [SerializeField] private UI_Inventory uiInventory;
 
     //Constructor
-    public Player()
+    private void Awake()
     {
         playerInventory = new Inventory();
+        uiInventory.SetInventory(inventory);
+
 
         hp = 100;
 
