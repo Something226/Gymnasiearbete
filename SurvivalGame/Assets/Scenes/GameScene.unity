@@ -146037,6 +146037,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1162004304073834108, guid: c08651e14086c2741bce78f192762115, type: 3}
   m_PrefabInstance: {fileID: 1162004305318534262}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1580720651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580720650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bdec47f774e6dd4a9e242f511de44c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tilemap_Foreground: {fileID: 0}
+  DirtBlock: {fileID: 11400000, guid: 390a2195eb7ad9c4dac77ce196d081ea, type: 2}
 --- !u!114 &1580720657
 MonoBehaviour:
   m_ObjectHideFlags: 0
