@@ -9,6 +9,8 @@ public class BlockModification : MonoBehaviour
     [SerializeField] private Tilemap Tilemap_Foreground;
     [SerializeField] private Tile DirtBlock;
 
+    [SerializeField] private Tile craftingTable;
+
 
 
     // Update is called once per frame
@@ -21,6 +23,8 @@ public class BlockModification : MonoBehaviour
             Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             // Debug.Log(mouseWorldPos);
             Vector3Int coordinate = Tilemap_Foreground.WorldToCell(mouseWorldPos);
+
+            print(Tilemap_Foreground.GetTile(coordinate) == craftingTable);
             // Debug.Log(coordinate);
             Tilemap_Foreground.SetTile(coordinate, null);
 

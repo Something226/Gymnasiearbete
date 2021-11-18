@@ -146401,7 +146401,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tilemap_Foreground: {fileID: 314834644}
-  DirtBlock: {fileID: 11400000, guid: 390a2195eb7ad9c4dac77ce196d081ea, type: 2}
+  DirtBlock: {fileID: 11400000, guid: c10b71ee00c53a54d8616de72b6a4c19, type: 2}
+  craftingTable: {fileID: 11400000, guid: c10b71ee00c53a54d8616de72b6a4c19, type: 2}
 --- !u!114 &1580720657
 MonoBehaviour:
   m_ObjectHideFlags: 0
