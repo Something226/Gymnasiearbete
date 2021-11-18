@@ -15,8 +15,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         playerInventory = new Inventory();
-        uiInventory.SetInventory(inventory);
-
+        uiInventory.SetInventory(playerInventory);
 
         hp = 100;
 
