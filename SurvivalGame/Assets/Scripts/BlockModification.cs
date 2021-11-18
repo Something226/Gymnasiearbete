@@ -35,7 +35,7 @@ public class BlockModification : MonoBehaviour
             // Debug.Log(mouseWorldPos);
             Vector3Int coordinate = Tilemap_Foreground.WorldToCell(mouseWorldPos);
             // Debug.Log(coordinate);
-            Tilemap_Foreground.SetTile(coordinate, null);
+            Tilemap_Foreground.SetTile(coordinate, DirtBlock);
         }
     }
 }
