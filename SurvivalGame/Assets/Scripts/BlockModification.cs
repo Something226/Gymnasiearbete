@@ -5,10 +5,9 @@ using UnityEngine.Tilemaps;
 
 public class BlockModification : MonoBehaviour
 {
-
-    [SerializeField] private Tilemap Tilemap_Foreground;
-    [SerializeField] private Tile DirtBlock;
-
+    [SerializeField] private Vector3 playerPos;
+    [SerializeField] private Tilemap tilemap_Foreground;
+    [SerializeField] private Tile dirtBlock;
     [SerializeField] private Tile craftingTable;
 
 
@@ -16,17 +15,16 @@ public class BlockModification : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(playerPos);
+        //Debug.Log(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+
         //when left click is pressed, remove tile at mouse position
         if (Input.GetMouseButtonDown(0))
         {
             // Debug.Log("pressed");
             Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            // Debug.Log(mouseWorldPos);
-            Vector3Int coordinate = Tilemap_Foreground.WorldToCell(mouseWorldPos);
-
-            print(Tilemap_Foreground.GetTile(coordinate) == craftingTable);
-            // Debug.Log(coordinate);
-            Tilemap_Foreground.SetTile(coordinate, null);
+            Vector3Int coordinate = tilemap_Foreground.WorldToCell(mouseWorldPos);
+            tilemap_Foreground.SetTile(coordinate, null);
 
 
 
@@ -34,12 +32,13 @@ public class BlockModification : MonoBehaviour
         //when right click is pressed, place tile at mouse position
         if (Input.GetMouseButtonDown(1))
         {
-            // Debug.Log("pressed");
+
             Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            // Debug.Log(mouseWorldPos);
-            Vector3Int coordinate = Tilemap_Foreground.WorldToCell(mouseWorldPos);
-            // Debug.Log(coordinate);
-            Tilemap_Foreground.SetTile(coordinate, DirtBlock);
+            Vector3Int coordinate = tilemap_Foreground.WorldToCell(mouseWorldPos);
+            if (tilemap_Foreground.GetTile(coordinate) == null)
+            {
+                tilemap_Foreground.SetTile(coordinate, dirtBlock);
+            }
         }
     }
 }
