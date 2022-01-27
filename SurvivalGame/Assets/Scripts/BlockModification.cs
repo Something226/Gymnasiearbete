@@ -5,7 +5,6 @@ using UnityEngine.Tilemaps;
 
 public class BlockModification : MonoBehaviour
 {
-    [SerializeField] private Vector3 playerPos;
     [SerializeField] private Tilemap tilemap_Foreground;
     [SerializeField] private Tile dirtBlock;
     [SerializeField] private Tile craftingTable;
@@ -15,8 +14,6 @@ public class BlockModification : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(playerPos);
-        //Debug.Log(Camera.main.ScreenToWorldPoint(Input.mousePosition));
 
         //when left click is pressed, remove tile at mouse position
         if (Input.GetMouseButtonDown(0))
