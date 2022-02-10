@@ -12,20 +12,92 @@ public class BlockModification : MonoBehaviour
 
     [SerializeField] private Tile currentTile;
 
+    [SerializeField] private bool useNumberKeys = true;
+
+    private int currentBlock = 1;
 
     // Update is called once per frame
     void Update()
     {
 
-        if (Input.GetButton("1"))
+        if (useNumberKeys)
         {
-            currentTile = stone;
+
+            if (Input.GetKey("1"))
+            {
+                currentTile = stone;
+            }
+
+            else if (Input.GetKey("2"))
+            {
+                currentTile = dirtBlock;
+            }
+
+            else if (Input.GetKey("3"))
+            {
+                currentTile = wood;
+            }
+
+            else if (Input.GetKey("4"))
+            {
+                currentTile = sand;
+            }
+
+            else if (Input.GetKey("5"))
+            {
+                currentTile = leaves;
+            }
+        }
+        else
+        {
+            if (Input.mouseScrollDelta.y == 1)
+            {
+                currentBlock++;
+
+            }
+            else if (Input.mouseScrollDelta.y == -1)
+            {
+                currentBlock--;
+
+            }
+            if (currentBlock >= 6)
+            {
+                currentBlock = 5;
+            }
+            if (currentBlock <= 0)
+            {
+                currentBlock = 1;
+            }
+
+            if (currentBlock == 1)
+            {
+                currentTile = stone;
+            }
+
+            else if (currentBlock == 2)
+            {
+                currentTile = dirtBlock;
+            }
+
+            else if (currentBlock == 3)
+            {
+                currentTile = wood;
+            }
+
+            else if (currentBlock == 4)
+            {
+                currentTile = sand;
+            }
+
+            else if (currentBlock == 5)
+            {
+                currentTile = leaves;
+            }
+
+
+            Debug.Log(currentBlock);
         }
 
-        else if (Input.GetButton("2"))
-        {
-            currentTile = dirtBlock;
-        }
         //when left click is pressed, remove tile at mouse position
         if (Input.GetMouseButtonDown(0))
         {

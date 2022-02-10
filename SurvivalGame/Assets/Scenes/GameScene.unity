@@ -469,3 +469,4 @@ MonoBehaviour:
   sand: {fileID: 11400000, guid: ee92b04911d025c4ab5cd0af92253d89, type: 2}
   leaves: {fileID: 11400000, guid: 9b4dbf8d8093d7042a8173338cd7bcbc, type: 2}
   currentTile: {fileID: 0}
+  useNumberKeys: 0
