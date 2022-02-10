@@ -462,7 +462,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bdec47f774e6dd4a9e242f511de44c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPos: {x: 0, y: 0, z: 0}
   tilemap_Foreground: {fileID: 314834644}
+  stone: {fileID: 11400000, guid: 371e0788942364b409d70ee8f3845cc2, type: 2}
   dirtBlock: {fileID: 11400000, guid: 390a2195eb7ad9c4dac77ce196d081ea, type: 2}
-  craftingTable: {fileID: 11400000, guid: c10b71ee00c53a54d8616de72b6a4c19, type: 2}
+  wood: {fileID: 11400000, guid: 0db656c92bbac6a4893393f27760a739, type: 2}
+  sand: {fileID: 11400000, guid: ee92b04911d025c4ab5cd0af92253d89, type: 2}
+  leaves: {fileID: 11400000, guid: 9b4dbf8d8093d7042a8173338cd7bcbc, type: 2}
+  currentTile: {fileID: 0}

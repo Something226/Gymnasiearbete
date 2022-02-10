@@ -1,3 +1,5 @@
+
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,15 +8,24 @@ using UnityEngine.Tilemaps;
 public class BlockModification : MonoBehaviour
 {
     [SerializeField] private Tilemap tilemap_Foreground;
-    [SerializeField] private Tile dirtBlock;
-    [SerializeField] private Tile craftingTable;
+    [SerializeField] private Tile stone, dirtBlock, wood, sand, leaves;
 
+    [SerializeField] private Tile currentTile;
 
 
     // Update is called once per frame
     void Update()
     {
 
+        if (Input.GetButton("1"))
+        {
+            currentTile = stone;
+        }
+
+        else if (Input.GetButton("2"))
+        {
+            currentTile = dirtBlock;
+        }
         //when left click is pressed, remove tile at mouse position
         if (Input.GetMouseButtonDown(0))
         {
@@ -34,7 +45,7 @@ public class BlockModification : MonoBehaviour
             Vector3Int coordinate = tilemap_Foreground.WorldToCell(mouseWorldPos);
             if (tilemap_Foreground.GetTile(coordinate) == null)
             {
-                tilemap_Foreground.SetTile(coordinate, dirtBlock);
+                tilemap_Foreground.SetTile(coordinate, currentTile);
             }
         }
     }
