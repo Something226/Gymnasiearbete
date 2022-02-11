@@ -1,4 +1,5 @@
 
+using System;
 using System.IO;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ public class BlockModification : MonoBehaviour
 
     [SerializeField] private bool useNumberKeys = true;
 
-    private int currentBlock = 1;
+    private static int currentBlock = 1;
 
     // Update is called once per frame
     void Update()
@@ -26,26 +27,31 @@ public class BlockModification : MonoBehaviour
             if (Input.GetKey("1"))
             {
                 currentTile = stone;
+
             }
 
             else if (Input.GetKey("2"))
             {
                 currentTile = dirtBlock;
+
             }
 
             else if (Input.GetKey("3"))
             {
                 currentTile = wood;
+
             }
 
             else if (Input.GetKey("4"))
             {
                 currentTile = sand;
+
             }
 
             else if (Input.GetKey("5"))
             {
                 currentTile = leaves;
+
             }
         }
         else
