@@ -373,6 +373,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 800c4ffb921745c42ad3470216724f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useNumberKeys: 0
+  selectedText: {fileID: 0}
 --- !u!1 &262777007
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,6 +938,7 @@ MonoBehaviour:
   sand: {fileID: 11400000, guid: ee92b04911d025c4ab5cd0af92253d89, type: 2}
   leaves: {fileID: 11400000, guid: 9b4dbf8d8093d7042a8173338cd7bcbc, type: 2}
   currentTile: {fileID: 0}
+  useNumberKeys: 1
 --- !u!1 &719705237
 GameObject:
   m_ObjectHideFlags: 0
@@ -1335,7 +1338,7 @@ GameObject:
   - component: {fileID: 1653212352}
   - component: {fileID: 1653212351}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SelectedText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1357,8 +1360,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -509.84, y: -172.56}
-  m_SizeDelta: {x: 441.63, y: 132.315}
+  m_AnchoredPosition: {x: -509.84, y: -216.63403}
+  m_SizeDelta: {x: 441.63, y: 44.167}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1653212351
 MonoBehaviour:
@@ -1372,6 +1375,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 800c4ffb921745c42ad3470216724f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useNumberKeys: 1
+  selectedText: {fileID: 1653212352}
 --- !u!114 &1653212352
 MonoBehaviour:
   m_ObjectHideFlags: 0
